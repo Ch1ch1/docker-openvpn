@@ -1,4 +1,5 @@
-FROM alpine
+FROM arm64v8/alpine
+COPY qemu-aarch64-static /usr/bin/
 
 HEALTHCHECK --interval=60s --timeout=15s --start-period=180s \
 CMD curl -LSs 'https://api.ipify.org' || kill 1
@@ -6,12 +7,11 @@ CMD curl -LSs 'https://api.ipify.org' || kill 1
 # Install openvpn
 RUN apk --no-cache --no-progress upgrade && \
     apk --no-cache --no-progress add bash curl ip6tables iptables openvpn \
-    shadow tini tzdata && \
+     shadow tini tzdata && \
     addgroup -S vpn && \
     rm -rf /tmp/*
 
 COPY openvpn.sh /usr/bin/
-RUN chmod +x /usr/bin/openvpn.sh
 
 VOLUME ["/vpn"]
 
