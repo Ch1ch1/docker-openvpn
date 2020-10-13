@@ -20,14 +20,3 @@ steps:
     username: ch1ch1
     password:
       from_secret: dockerhub-password
-
-- name: build alpine
-  image: plugins/docker
-  pull: if-not-exists
-  settings:
-    dockerfile: /drone/src/Dockerfile.alpine
-    repo: ch1ch1/openvpn
-    tag: [ "2.4.9-alpine" ]
-    username: ch1ch1
-    password:
-      from_secret: dockerhub-password
