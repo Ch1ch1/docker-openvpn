@@ -1,7 +1,7 @@
-FROM alpine
+FROM alpine:3.12
 
 HEALTHCHECK --interval=60s --timeout=15s --start-period=180s \
-CMD curl -LSs 'https://api.ipify.org' || kill 1
+             CMD curl -LSs 'https://api.ipify.org' || kill 1
 
 # Install openvpn
 RUN apk --no-cache --no-progress upgrade && \
