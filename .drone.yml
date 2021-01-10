@@ -5,12 +5,10 @@ name: Building..
 node:
   drone: ch1
   drone: nimi
-
 workspace:
   path: /drone/src
 
 steps:
-
 - name: build
   image: plugins/docker
   pull: if-not-exists
@@ -23,6 +21,6 @@ steps:
       from_secret: dockerhub-password
 ---
 kind: signature
-hmac: f1ccb2241b556cfcf346eac6f07ad3d9437334003195638a2e926d5c104f3ab1
+hmac: 2577ed1a8ac6fedd84ee44b442585b0daef37d139ac72f75cee169c1a949e8b4
 
 ...
