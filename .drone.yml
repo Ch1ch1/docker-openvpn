@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: docker
 name: Building..
@@ -20,3 +21,8 @@ steps:
     username: ch1ch1
     password:
       from_secret: dockerhub-password
+---
+kind: signature
+hmac: f1ccb2241b556cfcf346eac6f07ad3d9437334003195638a2e926d5c104f3ab1
+
+...
