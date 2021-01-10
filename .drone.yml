@@ -19,8 +19,9 @@ steps:
     username: ch1ch1
     password:
       from_secret: dockerhub-password
+
 ---
 kind: signature
-hmac: 2577ed1a8ac6fedd84ee44b442585b0daef37d139ac72f75cee169c1a949e8b4
+hmac: 2defe5a9b18c3e3b510005e314f9f6d07e329faf51a9d92ef64b739894829c5a
 
 ...
