@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.13
 
 HEALTHCHECK --interval=60s --timeout=15s --start-period=180s \
              CMD curl -LSs 'https://api.ipify.org' || kill 1

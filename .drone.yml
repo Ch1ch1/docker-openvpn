@@ -15,13 +15,13 @@ steps:
   settings:
     dockerfile: /drone/src/Dockerfile
     repo: ch1ch1/openvpn
-    tag: [ "latest","2.4.9"]
+    tag: [ "latest"]
     username: ch1ch1
     password:
       from_secret: dockerhub-password
 
 ---
 kind: signature
-hmac: 2defe5a9b18c3e3b510005e314f9f6d07e329faf51a9d92ef64b739894829c5a
+hmac: 00a86328fe50f3cf016d4aba0cfba2ff8364528f1967afd4fab220e76cbf359b
 
 ...
